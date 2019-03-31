@@ -1,0 +1,22 @@
+{
+  "name": "IOSNavScreen",
+  "version": "0.1.0",
+  "summary": "A short description of IOSNavScreen.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/alokkulkarni/IOSNavScreen",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "alokkulkarni": "kulkarni.alok@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/alokkulkarni/IOSNavScreen.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IOSNavScreen/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module IOSNavScreen {
+  umbrella header "IOSNavScreen-umbrella.h"
+
+  export *
+  module * { export * }
+}
