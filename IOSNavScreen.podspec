@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+new IOSNAvScreen Library for testing the pods model. Install this library and will never have to write this generic code again in your project.
                        DESC
 
   s.homepage         = 'https://github.com/alokkulkarni/IOSNavScreen'
@@ -27,7 +27,8 @@ TODO: Add long description of the pod here.
   s.author           = { 'alokkulkarni' => 'kulkarni.alok@gmail.com' }
   s.source           = { :git => 'https://github.com/alokkulkarni/IOSNavScreen.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/alkya80'
-
+  s.swift_version = '4.0'
+  
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'IOSNavScreen/Classes/**/*'

@@ -52,6 +52,8 @@
 		4A0CD763AB5476296B5872A99E312022 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39856580C2AD9093D6C876DF812980DE /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		50C744D38F925CDC3DF32FDAFFA7609D /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011EEA3D745F28CF23CDC90CDF5E7952 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		510D9CFA484B2E945842CFB993857ACD /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A238CF31E05C4B1D11E0E58BC8D16805 /* Errors.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		54E63F9A2251715B00ED3DDD /* NoScrollCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E63F992251715B00ED3DDD /* NoScrollCollectionView.swift */; };
+		54E63F9D2251765200ED3DDD /* NoScrollTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E63F9C2251765200ED3DDD /* NoScrollTableView.swift */; };
 		568CB55026E7A021D99FC095FA03B2A1 /* Pods-IOSNavScreen_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42CB7A3BF18109F6247AD24D57E95462 /* Pods-IOSNavScreen_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56C7B5FDDAF7812C4A77227C68F76289 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA942F5C2461463F52F82ED430E782 /* ExampleHooks.swift */; };
 		5C57FDB0AF10C528C1EF3C82AA4012AB /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8C4F04456488D98A9ED1791A0C32A /* NSBundle+CurrentTestBundle.swift */; };
@@ -281,6 +283,8 @@
 		4DAD6091F432CAC0CC6C84B19D9E3D84 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
 		4F8B376911B53A939E609ADA3013E3CC /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		5106851C1B7800FA808F69874BC3DC6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		54E63F992251715B00ED3DDD /* NoScrollCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScrollCollectionView.swift; sourceTree = "<group>"; };
+		54E63F9C2251765200ED3DDD /* NoScrollTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScrollTableView.swift; sourceTree = "<group>"; };
 		572906DA460A859764AE7E7249277A2F /* HaveValidDynamicTypeSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveValidDynamicTypeSnapshot.swift; path = DynamicType/HaveValidDynamicTypeSnapshot.swift; sourceTree = "<group>"; };
 		58A76E0C7FCF6B674505BA134BBF1870 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		59841B917E190AA71BCFCF593E84B6AC /* IOSNavScreen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IOSNavScreen.xcconfig; sourceTree = "<group>"; };
@@ -571,6 +575,8 @@
 		33AA36FDE9A3E53D4DFC32E37145C73B /* IOSNavScreen */ = {
 			isa = PBXGroup;
 			children = (
+				54E63F9B2251762900ED3DDD /* UITableView */,
+				54E63F982251712D00ED3DDD /* UICollectionView */,
 				BEE728617545CB5CDEA6FFE39BACBABD /* ReplaceMe.swift */,
 				B9735D189522EC3C6AF6AA470FB5FD8C /* Pod */,
 				C1EBEF62C8E81F3497F804E9C80B4DDA /* Support Files */,
@@ -656,6 +662,22 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
+			sourceTree = "<group>";
+		};
+		54E63F982251712D00ED3DDD /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				54E63F992251715B00ED3DDD /* NoScrollCollectionView.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		54E63F9B2251762900ED3DDD /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				54E63F9C2251765200ED3DDD /* NoScrollTableView.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		5EDFE0EA4718E382D2F01852C0C0A8D6 /* Targets Support Files */ = {
@@ -1192,10 +1214,12 @@
 				26D3EEFCFCA6DC9A4EB8EAD9703ECD98 /* FBSnapshotTestCase.m in Sources */,
 				E3B86D234BC43FB8877126BFDD760867 /* FBSnapshotTestCasePlatform.m in Sources */,
 				832DC61A7CA632444CD6DA46EF6491FC /* FBSnapshotTestController.m in Sources */,
+				54E63F9D2251765200ED3DDD /* NoScrollTableView.swift in Sources */,
 				33CD52558D8E2F820100C8753AA2F32F /* SwiftSupport.swift in Sources */,
 				CFA869102744DB995F3AC930E96E3AFF /* UIApplication+StrictKeyWindow.m in Sources */,
 				D428498A1A70F3DB2F9D9C921989E6B8 /* UIImage+Compare.m in Sources */,
 				E7F0B09F899DBFE173736F8AE258ED48 /* UIImage+Diff.m in Sources */,
+				54E63F9A2251715B00ED3DDD /* NoScrollCollectionView.swift in Sources */,
 				24DEF3AF3296F229268D80B50E433240 /* UIImage+Snapshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
